@@ -18,6 +18,7 @@ root.attributes("-topmost",True)
 sor,term=0,None
 open_fns=["open_youtube","open_chrome","open_python","open_control_panel","open_Command_Prompt","open_File_Explorer","open_this_pc","open_Windows_Administrative_Tools","open_Windows_PowerShell","open_Magnifier","open_Narrator","open_On_Screen_Keyboard","open_Notepad","open_Internet_Explorer","open_my_sql","open_Access","open_Acrobat_Reader","open_Adobe_Photoshop","open_BlueStacks","open_Excel","open_Firefox","open_Google_Chrome","open_Microsoft_Edge","open_Notepad_plus_plus","open_Outlook","open_PowerPoint","open_Publisher","open_Skype_for_Business","open_Sublime_Text","open_Word","open_Excel_2013","open_OneNote_2013","open_Outlook_2013","open_PowerPoint_2013","open_Publisher_2013","open_SkyDrive_Pro_2013","open_Word_2013","open_pycharm","open_teams","open_microsoft_teams"]
 main_fns=["sorry","end"]
+chrome_path = 'C:\Program Files\Google\Chrome\Application\chrome.exe'
 # def startalways():
 # 	try:
 # 		r = s_r.Recognizer()
@@ -194,14 +195,14 @@ def sorry():
 	speak("Sorry i didn't get that.")
 def webopen():
 	speak(f"ok serching web for {term}")
-	chromedir= 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
+	webbrowser.register('chrome',None,webbrowser.BackgroundBrowser(chrome_path))
 	url = "https://www.google.com.tr/search?q={}".format(term)
-	webbrowser.get(chromedir).open_new(url) 
+	webbrowser.get('chrome').open_new(url) 
 	
 def open_youtube():
 	speak("ok opening youtube on chrome")
-	chromedir= 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
-	webbrowser.get(chromedir).open_new("http://youtube.com") 
+	webbrowser.register('chrome',None,webbrowser.BackgroundBrowser(chrome_path))
+	webbrowser.get('chrome').open_new("http://youtube.com") 
 	
 def open_chrome():
 	speak("ok opening chrome")
