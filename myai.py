@@ -98,6 +98,7 @@ def match(listened,mainfns=main_fns,openfns=open_fns):
 	elif words[0].lower() in ["information","search","find"]:
 		global wikidata
 		wikidata=str(listenedw[int(len(words[0])+1):])
+		# wikidata=str(listenedw)
 		return 'searchwiki'
 	elif words[0].lower() in ["open"]:
 		bestfn="False"
@@ -214,63 +215,63 @@ def open_pycharm():
 
 def open_teams():
 	speak("ok opening microsoft teams")
-	os.startfile(r'C:\Users\ADMIN\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Microsoft Teams.lnk')
+	os.startfile(str(os.path.expandvars("%userprofile%") )+ r'\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Microsoft Teams.lnk')
 
 def open_microsoft_teams():
 	speak("ok opening microsoft teams")
-	os.startfile(r'C:\Users\ADMIN\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Microsoft Teams.lnk')
+	os.startfile(str(os.path.expandvars("%userprofile%") )+ r'\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Microsoft Teams.lnk')
 
 def open_python():
 	speak("ok opening python IDLE")
-	os.startfile(r'C:\Users\ADMIN\AppData\Local\Programs\Python\Python38\Lib\idlelib\idle.pyw')
+	os.startfile(str(os.path.expandvars("%userprofile%") )+ r'\AppData\Local\Programs\Python\Python38\Lib\idlelib\idle.pyw')
 	
 def open_control_panel():
 	speak("ok opening Control Panel")
-	os.startfile(r'C:\Users\ADMIN\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\System Tools\Control Panel.lnk')
+	os.startfile(str(os.path.expandvars("%userprofile%") )+ r'\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\System Tools\Control Panel.lnk')
 	
 def open_Command_Prompt():
 	speak("ok opening Command Prompt")
-	os.startfile(r'C:\Users\ADMIN\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\System Tools\Command Prompt.lnk')
+	os.startfile(str(os.path.expandvars("%userprofile%") )+ r'\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\System Tools\Command Prompt.lnk')
 	
 def open_File_Explorer():
 	speak("ok opening File Explorer")
-	os.startfile(r'C:\Users\ADMIN\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\System Tools\File Explorer.lnk')
+	os.startfile(str(os.path.expandvars("%userprofile%") )+ r'\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\System Tools\File Explorer.lnk')
 	
 def open_this_pc():
 	speak("ok opening This PC")
-	os.startfile(r'C:\Users\ADMIN\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\System Tools\File Explorer.lnk')
+	os.startfile(str(os.path.expandvars("%userprofile%") )+ r'\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\System Tools\File Explorer.lnk')
 	
 def open_Windows_Administrative_Tools():
 	speak("ok opening Windows Administrative Tools")
-	os.startfile(r'C:\Users\ADMIN\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\System Tools\Windows Administrative Tools.lnk')
+	os.startfile(str(os.path.expandvars("%userprofile%") )+ r'\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\System Tools\Windows Administrative Tools.lnk')
 	
 def open_Windows_PowerShell():
 	speak("ok opening Windows PowerShell")
-	os.startfile(r'C:\Users\ADMIN\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Windows PowerShell.lnk')
+	os.startfile(str(os.path.expandvars("%userprofile%") )+ r'\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Windows PowerShell.lnk')
 	
 def open_Magnifier():
 	speak("ok starting Magnifier")
-	os.startfile(r'C:\Users\ADMIN\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessibility\Magnifier.lnk')
+	os.startfile(str(os.path.expandvars("%userprofile%") )+ r'\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessibility\Magnifier.lnk')
 	
 def open_Narrator():
 	speak("ok starting Narrator")
-	os.startfile(r'C:\Users\ADMIN\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessibility\Narrator.lnk')
+	os.startfile(str(os.path.expandvars("%userprofile%") )+ r'\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessibility\Narrator.lnk')
 	
 def open_On_Screen_Keyboard():
 	speak("ok starting On Screen Keyboard")
-	os.startfile(r'C:\Users\ADMIN\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessibility\On-Screen Keyboard.lnk')
+	os.startfile(str(os.path.expandvars("%userprofile%") )+ r'\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessibility\On-Screen Keyboard.lnk')
 	
 def open_Notepad():
 	speak("ok opening Notepad")
-	os.startfile(r'C:\Users\ADMIN\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessories\Notepad.lnk')
+	os.startfile(str(os.path.expandvars("%userprofile%") )+ r'\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessories\Notepad.lnk')
 	
 def open_Internet_Explorer():
 	speak("ok opening Internet Explorer")
-	os.startfile(r'C:\Users\ADMIN\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessories\Internet Explorer.lnk')
+	os.startfile(str(os.path.expandvars("%userprofile%") )+ r'\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessories\Internet Explorer.lnk')
 	
 def open_my_sql():
 	speak("ok opening my sql")
-	os.startfile(r'C:\Users\ADMIN\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MySQL\MySQL Server 5.5\MySQL 5.5 Command Line Client.lnk')
+	os.startfile(str(os.path.expandvars("%userprofile%") )+ r'\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MySQL\MySQL Server 5.5\MySQL 5.5 Command Line Client.lnk')
 	
 def open_Access():
 	speak("ok opening Access")
